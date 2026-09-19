@@ -20,7 +20,7 @@ npm run build
 npm start
 ```
 
-The production build targets a Cloudflare-compatible Worker through the included Vinext and Sites configuration. `.openai/hosting.json` identifies the private Sites project. The GitHub repository is the primary source checkout; keep deployments private unless you deliberately change the audience.
+The production build targets a Cloudflare-compatible Worker through the included Vinext and Sites configuration. The saved Sites project in `.openai/hosting.json` was unavailable when publication was attempted, so no hosted deployment is claimed. The private repository at https://github.com/zakariyarjabbar/phantom-control-center is the primary source checkout. Keep any later deployment private unless you deliberately change its audience.
 
 ## Explore
 
@@ -80,6 +80,6 @@ public/audio/lullaby.wav              Authored fictional transmission
 
 ## Delivery status
 
-The final implementation was completed without further website testing at the owner's request. No final browser, automated interaction, or accessibility certification is claimed. Any production compilation is for packaging, not an end-to-end verification of the experience.
+The final implementation was completed without further website testing at the owner's request. No final browser, automated interaction, or accessibility certification is claimed. The production bundle compiled successfully. Compilation is not an end-to-end verification of the experience.
 
 See [DESIGN.md](DESIGN.md) for the visual system and [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for asset sources and licenses.
