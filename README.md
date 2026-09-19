@@ -1,12 +1,12 @@
 # PHANTOM — Control Center
 
-An immersive fictional command center built with React, TypeScript, and Vinext. Discover a signal, decode its coordinates, reveal a station, trace its connections, and recover an archive.
+An immersive fictional command center built with React, TypeScript, and Next.js. Discover a signal, decode its coordinates, reveal a station, trace its connections, and recover an archive.
 
 All stations, operational telemetry, packets, diagnostics, incidents, and transmissions are simulated. No command scans or controls a real network. The exploration directory is separate and links to real public websites.
 
 ## Run locally
 
-Requires Node.js 22.13 or later and npm.
+Requires Node.js 22.x and npm. `.nvmrc` and `package.json` pin the Node.js major version.
 
 ```sh
 npm ci
@@ -20,7 +20,9 @@ npm run build
 npm start
 ```
 
-The production build targets a Cloudflare-compatible Worker through the included Vinext and Sites configuration. The saved Sites project in `.openai/hosting.json` was unavailable when publication was attempted, so no hosted deployment is claimed. The private repository at https://github.com/zakariyarjabbar/phantom-control-center is the primary source checkout. Keep any later deployment private unless you deliberately change its audience.
+The default production build runs `next build` and emits `.next/`, including the route manifest required by Vercel. `vercel.json` selects the Next.js framework and pins the install command, build command, and output directory. Import the private GitHub repository in Vercel and deploy the `main` branch with the repository root as Root Directory. No application environment variables are required.
+
+`npm start` runs the production server on port 3000. The previous Cloudflare/Vinext tooling remains available as `dev:sites`, `build:sites`, and `start:sites`; it does not run during a Vercel build. The saved Sites project was unavailable at delivery. The private repository at https://github.com/zakariyarjabbar/phantom-control-center is the primary source checkout. Preserve the deployment audience in your hosting settings.
 
 ## Explore
 

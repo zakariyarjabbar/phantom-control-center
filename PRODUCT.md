@@ -10,7 +10,7 @@ Visitors discover a signal, decode coordinates, reveal a station, trace its netw
 
 ## Stack
 
-User delegated the modern stack choice. React 19, TypeScript, Vinext, local browser persistence, no paid APIs or live operational systems. Sites private hosting.
+User delegated the modern stack choice. React 19, TypeScript, Next.js for Vercel, local browser persistence, no paid APIs or live operational systems. The original Vinext/Sites scripts remain optional legacy tooling; Vercel is the requested deployment target.
 
 ## Confirmed requirements
 
